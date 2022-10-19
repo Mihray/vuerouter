@@ -1,6 +1,8 @@
-const Home={template:<div>Home</div>}
-const About={template:<div>About</div>}
+// const Home={template:<div>Home</div>}
+// const About={template:<div>About</div>}
+import HomeVue from '../components/HomeVue.Vue'
 
+HomeVue.use(router)
 const routes=[
     {
         path:'/',component:Home
@@ -15,6 +17,8 @@ const router=VueRouter.createRouter({
     routes:routes
 })
 
-const app=Vue.createApp({})
-app.use(router)
-app.mount('#app')
+HomeVue.use(router)
+
+// const app=Vue.createApp({})
+// app.use(router)
+// app.mount('#app')
