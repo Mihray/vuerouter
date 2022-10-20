@@ -15,6 +15,6 @@ const router=VueRouter.createRouter({
     routes:routes
 })
 
-const app=Vue.createApp({})
-app.use(router)
-app.mount('#app')
+// const app=Vue.createApp({})
+// app.use(router)
+// app.mount('#app')
