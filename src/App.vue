@@ -1,14 +1,17 @@
 <template>
-  <HomeVue></HomeVue>
+  <!-- <HomeVue></HomeVue> -->
+  <LoginVue></LoginVue>
 </template>
 
 <script>
-import HomeVue from './components/HomeVue.vue'
+// import HomeVue from './components/HomeVue.vue'
+import LoginVue from './components/LoginVue.vue'
 
 export default {
   name: 'App',
   components: {
-    HomeVue,
+    // HomeVue,
+    LoginVue,
   }
 }
 </script>
