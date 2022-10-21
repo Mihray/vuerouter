@@ -1,20 +1,29 @@
-const Home={template:<div>Home</div>}
-const About={template:<div>About</div>}
+
+import HomeVue from '../components/HomeVue'
+import LoginVue from '../components/LoginVue'
+// import {createRouter, createWebHistory} from 'vue-router'
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
 
 const routes=[
     {
-        path:'/',component:Home
+        path:'/',component:HomeVue
     },
     {
-        path:'/about',component:About
+        path:'/LoginVue',component:LoginVue
     }
 ]
+// export default createRouter({
+//     history: createWebHistory(),
+//     routes
+// })
 
 const router=VueRouter.createRouter({
     history:VueRouter.createWebHashHistory(),
     routes:routes
 })
+HomeVue.use(router)
 
-// const app=Vue.createApp({})
-// app.use(router)
-// app.mount('#app')
