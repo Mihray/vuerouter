@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="appt">
         <h1>hello App!</h1>
         <p>
             Go to Home
