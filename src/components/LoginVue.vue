@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login" >
         <div class="box-card">
                 <div style="display: flex;justify-content: center;">
                     <span style="margin-top:10px;font-size:24px">通用后台管理系统</span>
@@ -21,7 +21,9 @@
                     @blur="verification_password">
                     <label class="warn_pass" v-show="show2">长度在6-12位字符之间</label>
             </div>
-            <button  class="loginBut" type="primary" @click="login">登录</button>
+            <!-- @click="login" -->
+            <button  class="loginBut" type="primary" 
+             @click="$emit('see-world','HomeVue')">登录</button>
         </form>
     </div>
     </div>
@@ -83,7 +85,7 @@ export default {
     width:100%;
     height:100%;
     position:absolute;
-    background:#409EFF;
+    background:#f29191;
     font-size:17px
 }
 .box-card{
@@ -113,10 +115,10 @@ input{
     margin-top:20px;
 }
 .loginBut {
-    background: #409EFF;
+    background: #f29191;
     height: 35px;
     width:60px;
-    border-color: #409EFF;
+    border-color: #f29191;
     border-radius:4px;
     margin-top:15px;
     margin-left: 150px;

@@ -1,7 +1,7 @@
 <template>
-  <!-- <HomeVue></HomeVue> -->
-  <LoginVue></LoginVue>
-
+  <HomeVue  v-if="page==='HomeVue'"></HomeVue>
+  <LoginVue v-if="page==='LoginVue'" @see-world="changePage"></LoginVue>
+  
   <!-- <ul>
    <router-link to='/LoginVue' ><a href="/LoginVue">LoginVue</a></router-link>
    <router-link to='/HomeVue' ><a href="/HomeVue">HomeVue</a></router-link>
@@ -10,21 +10,35 @@
 </template>
 
 <script>
-// import HomeVue from './components/HomeVue.vue'
+import HomeVue from './components/HomeVue.vue'
 import LoginVue from './components/LoginVue.vue'
+// import HeadPortrait from './components/HeadPortrait.vue'
+// import SideBar from './components/SideBar.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      page:'LoginVue'
+    }
+  },
+  methods:{
+    changePage(param){
+      this.page=param;
+    }
+  },
   components: {
-    // HomeVue,
+    HomeVue,
     LoginVue,
+    // HeadPortrait,
+    // SideBar,
   }
 }
 </script>
 
 <style>
 body{
-  background:#409EFF;
+  background:#f29191;
   margin: 0;
 }
 </style>
