@@ -9,7 +9,7 @@
                     <label prop="userName">
                         <span style="color:brown">*</span>用户名
                     </label>
-                    <input type="username" v-model="userName" placeholder="请输入用户名" 
+                    <input type="username" v-model="userName" @change="$emit('username',userName)" placeholder="请输入用户名" 
                     @blur="verification_username">
                     <label class="warn_name" v-show="show">长度在4-10位字符之间</label>
             </div>
@@ -29,6 +29,8 @@
     </div>
 </template>
 <script>
+// import eventBus from '@/router/EventBus';
+
 export default {
     data(){
         return{
@@ -73,7 +75,10 @@ export default {
             // window.open("https://www.baidu.com")
             // window.open("./components/HomeVue.vue")
             // this.$router.push('/')
-        }
+        },
+        // pushuserName(){
+            // eventBus.$emit('pushuserName',this.userName)
+        // }
     }
 }
 </script>

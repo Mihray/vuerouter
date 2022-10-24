@@ -5,7 +5,7 @@ import LoginVue from '../components/LoginVue'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+Vue.use(VueRuseouter)
 
 
 const routes=[

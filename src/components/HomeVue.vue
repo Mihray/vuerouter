@@ -1,7 +1,7 @@
 <template>
     <div class="home"> 
         <div>  
-            <HeadPortrait></HeadPortrait> 
+            <HeadPortrait :userName="userName"></HeadPortrait> 
             <SideBar></SideBar>
         </div>
         <Center-Vue class="Center_Vue"></Center-Vue>
@@ -18,6 +18,9 @@ export default {
         HeadPortrait,
         SideBar,
         CenterVue,
+    },
+    props:{
+        userName:String,
     }
 }
 </script>

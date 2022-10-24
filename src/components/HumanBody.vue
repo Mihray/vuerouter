@@ -22,7 +22,7 @@ export default {
 .humanbody{
     width:200px;
     height:550px;
-    margin-left: 250px;
-    margin-top: 25px;
+    margin-left: 50px;
+    margin-top: 40px;
 }
 </style>

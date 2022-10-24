@@ -1,7 +1,7 @@
 <template>
-  <HomeVue  v-if="page==='HomeVue'"></HomeVue>
-  <LoginVue v-if="page==='LoginVue'" @see-world="changePage"></LoginVue>
-  
+  <HomeVue :userName="userName"  v-if="page==='HomeVue'"></HomeVue>
+  <LoginVue v-if="page==='LoginVue'" @see-world="changePage" @username="changeName"></LoginVue>
+  <!-- <HeadPortrait></HeadPortrait> -->
   <!-- <ul>
    <router-link to='/LoginVue' ><a href="/LoginVue">LoginVue</a></router-link>
    <router-link to='/HomeVue' ><a href="/HomeVue">HomeVue</a></router-link>
@@ -19,12 +19,16 @@ export default {
   name: 'App',
   data(){
     return {
-      page:'LoginVue'
+      page:'LoginVue',
+      userName:'',
     }
   },
   methods:{
     changePage(param){
       this.page=param;
+    },
+    changeName(param1){
+      this.userName=param1;
     }
   },
   components: {
