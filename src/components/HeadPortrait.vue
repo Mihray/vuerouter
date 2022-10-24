@@ -3,7 +3,11 @@
         <div id="headimg" class="headimg" @focus="headimg">
         <!-- <img src="../assets/头像.jpg" style="width:100px;height:100px;"> -->
         </div>
-        <span>{{userName}}</span>
+        <div class="span_head"> 
+            <span class="span_head1">{{userName}}</span>
+            <!-- 写一个button 看起来想是下面的样式 -->
+            <span class="span_head2" :style="spanstyle" @click="updatecard">修改资料</span>
+        </div>
     </div>
 </template>
 <script>
@@ -11,7 +15,9 @@
 export default {
     data(){
         return{
-            
+            spanstyle:{
+                color:'black'
+            }
         }
     },
     methods:{
@@ -20,6 +26,10 @@ export default {
         //         this.userName=HuserName;
         //     })
         // }
+        updatecard(){
+            this.spanstyle.color='white';
+        }
+        //点击完成之后恢复到原来
     },
     props:{
         userName:String,
@@ -37,7 +47,24 @@ export default {
     -moz-background-size:100% 100%; 
     background-size:100% 100%;
 }
-span{
+/* span{
+    margin-top:60px;
+} */
+.span_head{
+    display:flex;
+    flex-direction:column;
     margin-top:60px;
 }
+.span_head1{
+    font-weight:700;
+    font-size:18px;
+}
+.span_head2{
+    margin-top:10px;
+    font-weight:200;
+    text-decoration:underline;
+}
+/* .span_head2 :hover{
+    color:white;
+} */
 </style>

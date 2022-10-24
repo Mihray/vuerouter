@@ -4,7 +4,7 @@
             <HeadPortrait :userName="userName"></HeadPortrait> 
             <SideBar></SideBar>
         </div>
-        <Center-Vue class="Center_Vue"></Center-Vue>
+        <Center-Vue class="Center_Vue" :userName="userName"></Center-Vue>
     </div>
 </template>
 <script>

@@ -1,7 +1,8 @@
 <template>
     <div class="datacard">
         <ul>
-            <li>昵称：</li>
+            <li style="font-weight:700">我的资料</li>
+            <li>昵称：{{userName}}</li>
             <li>性别：</li>
             <li>年龄：</li>
             <li>身高：</li>
@@ -12,7 +13,20 @@
 </template>
 <script>
 export default {
-    
+    props:{
+        userName:String,
+    },
+    data(){
+        return {
+            // userDate:{
+            //     sex:'',
+            //     age:'',
+            //     height:'',
+            //     weight:'',
+            //     clothes:'',
+            // }
+        }
+    }
 }
 </script>
 <style scoped>
