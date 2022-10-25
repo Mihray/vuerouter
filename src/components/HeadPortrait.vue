@@ -17,7 +17,7 @@ export default {
         return{
             spanstyle:{
                 color:'black'
-            }
+            },
         }
     },
     methods:{
@@ -28,6 +28,7 @@ export default {
         // }
         updatecard(){
             this.spanstyle.color='white';
+            this.$emit('showUpdate')
         }
         //点击完成之后恢复到原来
     },

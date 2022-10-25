@@ -19,7 +19,7 @@ export default {
     },
     methods:{
         liClick: function(){
-            
+            this.$emit('myimage')
         }
     }
 }

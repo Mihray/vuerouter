@@ -1,10 +1,10 @@
 <template>
     <div class="home"> 
         <div>  
-            <HeadPortrait :userName="userName"></HeadPortrait> 
-            <SideBar></SideBar>
+            <HeadPortrait @showUpdate="showUpdate" :userName="userName"></HeadPortrait> 
+            <SideBar @myimage="show22"></SideBar>
         </div>
-        <Center-Vue class="Center_Vue" :userName="userName"></Center-Vue>
+        <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2"></Center-Vue>
     </div>
 </template>
 <script>
@@ -14,6 +14,12 @@ import SideBar from './SideBar.vue'
 import CenterVue from './CenterVue.vue'
 
 export default {
+    data(){
+        return{
+            show:false,
+            show2:true,
+        }
+    },
     components:{
         HeadPortrait,
         SideBar,
@@ -21,6 +27,14 @@ export default {
     },
     props:{
         userName:String,
+    },
+    methods:{
+        showUpdate(){
+        this.show = !this.show;
+    },
+        show22(){
+            this.show2=!this.show2;
+        }
     }
 }
 </script>

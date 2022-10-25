@@ -1,8 +1,8 @@
 <template>
     <div id="center" class="center">
-        <DataCard :userName="userName"></DataCard>
-        <HumanBody ></HumanBody>
-        <UpDate :userName="userName"></UpDate>
+        <DataCard :userName="userName" v-if="show2"></DataCard>
+        <HumanBody v-if="show2"></HumanBody>
+        <UpDate  :userName="userName"  v-if="show"></UpDate>
     </div>
 </template>
 <script>
@@ -11,10 +11,25 @@ import DataCard from './DataCard.vue';
 import UpDate from './UpDate.vue';
 
 export default {
+    created() {
+        alert('欢迎使用')
+    },
     components: { HumanBody, DataCard, UpDate },
     props:{
         userName:String,
-    }
+        show:Boolean,
+        show2:Boolean,
+    },
+    data(){
+        return{
+            
+        }
+    },
+    // showUpdate(){
+    //     this.show=true;
+    //     console.log('不显示了')
+    // }
+
 }
 </script>
 <style scoped>
