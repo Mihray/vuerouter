@@ -4,7 +4,7 @@
             <HeadPortrait @showUpdate="showUpdate" :userName="userName"></HeadPortrait> 
             <SideBar @myimage="show22"></SideBar>
         </div>
-        <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2"></Center-Vue>
+        <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2" @closecard="Closecard"></Center-Vue>
     </div>
 </template>
 <script>
@@ -34,6 +34,9 @@ export default {
     },
         show22(){
             this.show2=!this.show2;
+        },
+        Closecard(param4){
+            this.show=param4
         }
     }
 }

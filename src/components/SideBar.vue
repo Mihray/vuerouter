@@ -42,10 +42,10 @@ export default {
     font-size: 18px;
     margin-top:10px;
     font-weight: 200;
-    color:brown;
+    color:#e79f80;
 }
 .sidebar ul li:hover {
-    color: red;
+    color: #931e1e;
     cursor:pointer;
 }
 </style>

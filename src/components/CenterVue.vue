@@ -1,8 +1,8 @@
 <template>
     <div id="center" class="center">
-        <DataCard :userName="userName" v-if="show2"></DataCard>
-        <HumanBody v-if="show2"></HumanBody>
-        <UpDate  :userName="userName"  v-if="show"></UpDate>
+        <DataCard :userName="userName" v-if="show2" :userDate3="userDate2"></DataCard>
+        <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
+        <UpDate  :userName="userName"  v-if="show" @datesubmit="datesub"></UpDate>
     </div>
 </template>
 <script>
@@ -11,9 +11,9 @@ import DataCard from './DataCard.vue';
 import UpDate from './UpDate.vue';
 
 export default {
-    created() {
-        alert('欢迎使用')
-    },
+    // created() {
+    //     alert('欢迎使用')
+    // },
     components: { HumanBody, DataCard, UpDate },
     props:{
         userName:String,
@@ -22,13 +22,22 @@ export default {
     },
     data(){
         return{
-            
+            // show:false,
+            // show2:true,
+            // bir:'',
+            userDate2:{ }
         }
     },
-    // showUpdate(){
-    //     this.show=true;
-    //     console.log('不显示了')
-    // }
+    methods:{
+        datesub(param3){
+            // this.bir=param3;
+            // console.log(this.bir)
+            console.log(param3)
+            this.userDate2=param3;
+            console.log(this.userDate2.sex)
+            this.$emit('closecard',false)
+        }
+    }
 
 }
 </script>

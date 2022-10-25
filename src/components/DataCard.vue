@@ -3,10 +3,10 @@
         <ul>
             <li style="font-weight:700">我的资料</li>
             <li>昵称：{{userName}}</li>
-            <li>性别：</li>
-            <li>年龄：</li>
-            <li>身高：</li>
-            <li>体重：</li>
+            <li>性别：{{userDate3.sex}}</li>
+            <li>年龄：{{userDate3.age}}</li>
+            <li>身高：{{userDate3.height}}</li>
+            <li>体重：{{userDate3.weight}}</li>
             <li>服装：</li>
         </ul>
     </div>
@@ -15,6 +15,7 @@
 export default {
     props:{
         userName:String,
+        userDate3:Object,
     },
     data(){
         return {

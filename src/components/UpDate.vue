@@ -1,5 +1,5 @@
 <template>
-    <form class="update">
+    <div class="update">
         <!-- <label class="xiugaiziliao">修改资料</label> -->
         <div class="username">
             <!-- <label class="xiugaiziliao">修改资料</label> -->
@@ -8,9 +8,9 @@
         </div>
         <div class="sex">
             <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
-            <input type="radio" id="woman" value="woman" v-model="userDate.sex">
+            <input type="radio" id="woman" value="女" v-model="userDate.sex">
             <label for="woman">女</label>
-            <input type="radio" id="man" value="man" v-model="userDate.sex">
+            <input type="radio" id="man" value="男" v-model="userDate.sex">
             <label for="man">男</label>
         </div>
         <div class="birthday">
@@ -19,7 +19,7 @@
         </div>
         <div class="age">
             <label>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</label>
-            <input v-model="userDate.age" :value="userDate.age+'岁'">
+            <input v-model="userDate.age"> 
         </div>
         <div class="height">
             <label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label>
@@ -29,13 +29,8 @@
             <label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label>
             <input v-model="userDate.weight">
         </div>
-        <div class="clothes">
-            <div>
-                <img>
-            </div>
-        </div>
-            <button class="submit" @click="submit" type="primary">保存</button>
-    </form>
+            <button class="submit" @click="dateSubmit" >保存</button>
+    </div>
 </template>
 <script>
 export default {
@@ -70,6 +65,10 @@ export default {
             // console.log(this.brthYear)
             this.userDate.age=1900+this.year-this.brthYear;
             console.log(this.userDate.age)
+            // this.$emit('datesubmit',this.userDate)
+        },
+        dateSubmit(){
+            this.$emit('datesubmit',this.userDate)
         }
     }
 }
@@ -78,7 +77,7 @@ export default {
 .update{
     position:absolute;
     width: 600px;
-    background-color: #f29191;
+    background-color: #e79f80;
     height: 500px;
     margin-top: 60px;
     border-radius:6px 6px 6px 6px;
@@ -126,5 +125,6 @@ export default {
     border-color:white;
     margin-left:250px;
     background-color: white;
+    margin-top: 15px;
 }
 </style>
