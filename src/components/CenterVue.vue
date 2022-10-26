@@ -3,7 +3,7 @@
         <DataCard :userName="userName" v-if="show2" :userDate3="userDate2"></DataCard>
         <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
         <UpDate  :userName="userName"  v-if="show" @datesubmit="datesub"></UpDate>
-        <Hair v-if="show3" ></Hair>
+        <Hair v-if="show3"></Hair>
     </div>
 </template>
 <script>

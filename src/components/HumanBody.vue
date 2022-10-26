@@ -5,6 +5,7 @@
         <img class="humanbody" src="../assets/形象男11.png"
         v-if="userDate4.sex==='男'">
     </div>
+
 </template>
 <script>
 export default {
