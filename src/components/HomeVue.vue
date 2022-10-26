@@ -2,9 +2,10 @@
     <div class="home"> 
         <div>  
             <HeadPortrait @showUpdate="showUpdate" :userName="userName"></HeadPortrait> 
-            <SideBar @myimage="show22"></SideBar>
+            <SideBar @myimage="show22" @changeImage="changeimaege"></SideBar>
         </div>
-        <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2" @closecard="Closecard"></Center-Vue>
+        <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2" 
+        :show3="show3"  @closecard="Closecard"></Center-Vue>
     </div>
 </template>
 <script>
@@ -18,6 +19,7 @@ export default {
         return{
             show:false,
             show2:true,
+            show3:false,
         }
     },
     components:{
@@ -37,6 +39,9 @@ export default {
         },
         Closecard(param4){
             this.show=param4
+        },
+        changeimaege(){
+            this.show3=!this.show3;
         }
     }
 }

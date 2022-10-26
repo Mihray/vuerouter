@@ -1,9 +1,9 @@
 <template>
     <div id="sidebar" class="sidebar">
         <ul>
-            <li @click="liClick">我的形象</li>
+            <li @click="liClick">我的资料</li>
             <li>我的服装</li>
-            <li>更换形象</li>
+            <li @click="changeImage">更换形象</li>
             <li>服装商城</li>
             <li>更多</li>
         </ul>
@@ -20,6 +20,9 @@ export default {
     methods:{
         liClick: function(){
             this.$emit('myimage')
+        },
+        changeImage:function(){
+            this.$emit('changeImage')
         }
     }
 }
