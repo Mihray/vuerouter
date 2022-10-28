@@ -2,8 +2,8 @@
     <div id="sidebar" class="sidebar">
         <ul>
             <li @click="liClick">我的资料</li>
-            <li>我的服装</li>
-            <li @click="changeImage">更换形象</li>
+            <li>更换服装</li>
+            <li @click="changeImage">更换发型</li>
             <li>服装商城</li>
             <li>更多</li>
         </ul>

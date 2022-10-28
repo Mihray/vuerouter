@@ -15,7 +15,7 @@
         </div>
         <div class="birthday">
             <label>出生日期：</label>
-            <input class="birthdayBox" type="date" v-model="userDate.birthday" min="1960-01-01" @change="countAge" required>
+            <input class="birthdayBox" type="date" v-model="userDate.birthday" min="1960-01-01"  @change="countAge" required>
         </div>
         <div class="age">
             <label>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</label>
@@ -53,8 +53,9 @@ export default {
     },
     methods:{
         countAge(){
-            var aData = new Date();
-            // console.log(aData)
+            const aData = new Date();
+            console.log(typeof(aData))
+            console.log(aData)
             this.year=aData.getYear();
             // console.log(this.year)
             // console.log(this.userDate.birthday)

@@ -1,11 +1,11 @@
 <template>
     <div class="home"> 
         <div>  
-            <HeadPortrait @showUpdate="showUpdate" :userName="userName"></HeadPortrait> 
+            <HeadPortrait @showUpdate="showUpdate" :userName="userName" :user-date6="userDate7"></HeadPortrait> 
             <SideBar @myimage="show22" @changeImage="changeimaege"></SideBar>
         </div>
         <Center-Vue class="Center_Vue" :userName="userName"  :show="show" :show2="show2" 
-        :show3="show3"  @closecard="Closecard"></Center-Vue>
+        :show3="show3"  @closecard="Closecard" @headP="haedp"></Center-Vue>
     </div>
 </template>
 <script>
@@ -20,6 +20,7 @@ export default {
             show:false,
             show2:true,
             show3:false,
+            userDate7:{ }
         }
     },
     components:{
@@ -36,12 +37,19 @@ export default {
     },
         show22(){
             this.show2=!this.show2;
+            this.show3=false;
         },
         Closecard(param4){
-            this.show=param4
+            this.show=param4;
         },
         changeimaege(){
             this.show3=!this.show3;
+            this.show2=false;
+        },
+        haedp(param7){
+            console.log(param7)
+            this.userDate7=param7;
+            console.log(this.userDate7)
         }
     }
 }

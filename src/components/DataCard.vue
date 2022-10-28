@@ -7,7 +7,6 @@
             <li>年龄：{{userDate3.age}}</li>
             <li>身高：{{userDate3.height}}</li>
             <li>体重：{{userDate3.weight}}</li>
-            <li>服装：</li>
         </ul>
     </div>
 </template>

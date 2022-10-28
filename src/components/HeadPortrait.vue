@@ -7,6 +7,10 @@
             <span class="span_head1">{{userName}}</span>
             <!-- 写一个button 看起来想是下面的样式 -->
             <span class="span_head2" :style="spanstyle" @click="updatecard">修改资料</span>
+            <div style="display:flex">
+                <span :style="spanstyle2">{{userDate6.sex}}</span>
+                <span :style="spanstyle2">{{userDate6.age}}岁</span>
+        </div>
         </div>
     </div>
 </template>
@@ -18,6 +22,11 @@ export default {
             spanstyle:{
                 color:'black'
             },
+            spanstyle2:{
+                fontWeight:200,
+                marginLeft:'10px',
+                marginTop:'5px',
+            }
         }
     },
     methods:{
@@ -34,6 +43,7 @@ export default {
     },
     props:{
         userName:String,
+        userDate6:Object,
     }
 }
 </script>
@@ -43,7 +53,7 @@ export default {
     height:100px;
     margin:50px 20px 50px 40px;
     border-radius:50%;
-    background:url(../assets/头像.jpg);
+    background:url('../assets/头像.jpg');
     /* backgrond自适应 */
     -moz-background-size:100% 100%; 
     background-size:100% 100%;
@@ -64,6 +74,7 @@ export default {
     margin-top:10px;
     font-weight:200;
     text-decoration:underline;
+    margin-left: 10px;
 }
 /* .span_head2 :hover{
     color:white;

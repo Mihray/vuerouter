@@ -3,7 +3,8 @@
         <DataCard :userName="userName" v-if="show2" :userDate3="userDate2"></DataCard>
         <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
         <UpDate  :userName="userName"  v-if="show" @datesubmit="datesub"></UpDate>
-        <Hair v-if="show3"></Hair>
+        <Hair v-if="show3" :userDate5="userDate2"></Hair>
+        <Clothes :userDate8="userDate2"></Clothes>
     </div>
 </template>
 <script>
@@ -11,13 +12,14 @@ import HumanBody from './HumanBody.vue';
 import DataCard from './DataCard.vue';
 import UpDate from './UpDate.vue';
 import Hair from './Image/Hair.vue';
+import Clothes from './Clothes.vue';
 
 
 export default {
     // created() {
     //     alert('欢迎使用')
     // },
-    components: { HumanBody, DataCard, UpDate ,Hair},
+    components: { HumanBody, DataCard, UpDate ,Hair,Clothes},
     props:{
         userName:String,
         show:Boolean,
@@ -40,6 +42,7 @@ export default {
             this.userDate2=param3;
             console.log(this.userDate2.sex)
             this.$emit('closecard',false)
+            this.$emit('headP',param3)
         }
     }
 

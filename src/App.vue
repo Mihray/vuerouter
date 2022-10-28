@@ -13,7 +13,7 @@
 import HomeVue from './components/HomeVue.vue'
 import LoginVue from './components/LoginVue.vue'
 // import HeadPortrait from './components/HeadPortrait.vue'
-// import SideBar from './components/SideBar.vue'
+// import SideBar from './components/SideBar.vue'  vue-cli
 
 export default {
   name: 'App',
