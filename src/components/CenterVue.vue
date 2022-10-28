@@ -2,7 +2,7 @@
     <div id="center" class="center">
         <DataCard :userName="userName" v-if="show2" :userDate3="userDate2"></DataCard>
         <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
-        <UpDate  :userName="userName"  v-if="show" @datesubmit="datesub"></UpDate>
+        <UpDate  :userName="userName"  v-show="show" @datesubmit="datesub"></UpDate>
         <Hair v-if="show3" :userDate5="userDate2"></Hair>
         <Clothes :userDate8="userDate2" v-if="show4"></Clothes>
     </div>

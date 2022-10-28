@@ -22,7 +22,7 @@ export default {
     },
     data(){
         return{
-            hairSrc:require('../../assets/男女发型44.png'),
+            hairSrc:require('../../assets/男发型22.png'),
         }
     },
     methods:{
