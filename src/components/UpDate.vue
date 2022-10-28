@@ -19,11 +19,11 @@
         </div>
         <div class="age">
             <label>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</label>
-            <input v-model="userDate.age"> 
+            <input v-model="userDate.age" > 
         </div>
         <div class="height">
             <label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label>
-            <input v-model="userDate.height">
+            <input v-model="userDate.height" >
         </div>
         <div class="weight">
             <label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label>

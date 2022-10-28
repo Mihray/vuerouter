@@ -4,7 +4,7 @@
         <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
         <UpDate  :userName="userName"  v-if="show" @datesubmit="datesub"></UpDate>
         <Hair v-if="show3" :userDate5="userDate2"></Hair>
-        <Clothes :userDate8="userDate2"></Clothes>
+        <Clothes :userDate8="userDate2" v-if="show4"></Clothes>
     </div>
 </template>
 <script>
@@ -25,6 +25,7 @@ export default {
         show:Boolean,
         show2:Boolean,
         show3:Boolean,
+        show4:Boolean,
     },
     data(){
         return{
