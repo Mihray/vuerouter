@@ -1,10 +1,10 @@
 <template>
     <div id="center" class="center">
         <DataCard :userName="userName" v-if="show2" :userDate3="userDate2"></DataCard>
-        <HumanBody v-if="show2" :userDate4="userDate2"></HumanBody>
+        <HumanBody v-if="show2" :userDate4="userDate2" :clothesSrc1="clothesSrc1"></HumanBody>
         <UpDate  :userName="userName"  v-show="show" @datesubmit="datesub"></UpDate>
         <Hair v-if="show3" :userDate5="userDate2"></Hair>
-        <Clothes :userDate8="userDate2" v-if="show4"></Clothes>
+        <Clothes :userDate8="userDate2" v-if="show4" @choiceClothes="choiceclothes"></Clothes>
     </div>
 </template>
 <script>
@@ -32,7 +32,8 @@ export default {
             // show:false,
             // show2:true,
             // bir:'',
-            userDate2:{ }
+            userDate2:{ },
+            clothesSrc1:'',
         }
     },
     methods:{
@@ -44,6 +45,11 @@ export default {
             console.log(this.userDate2.sex)
             this.$emit('closecard',false)
             this.$emit('headP',param3)
+        },
+        choiceclothes(param9){
+            console.log('chose cloth param:', param9 );
+            this.clothesSrc1=param9
+            console.log(this.clothesSrc1)
         }
     }
 

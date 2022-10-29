@@ -1,15 +1,15 @@
 <template>
     <div>
-        <img class="humanbody" src="../assets/形象女11.png"
+        <img class="humanbody" src="@/assets/形象女11.png"
         v-if="userDate4.sex==='女'">
-        <img class="humanbody" src="../assets/形象男11.png"
+        <img class="humanbody" src="@/assets/形象男11.png"
         v-if="userDate4.sex==='男'">
     </div>
-    <div class="hair">
-        <img  class="hair" src="../assets/男发型11.png">
+    <div class="overall">
+        <img  class="hair111" src="@/assets/男发型11.png">
+    <div >
+        <img class="clothes111" :src="clothesSrc1" > 
     </div>
-    <div class="clothes">
-        <img class="clothes11" src="../assets/套装1.png" > 
     </div>
 
 </template>
@@ -17,7 +17,11 @@
 export default {
     props:{
         userDate4:Object,
+        clothesSrc1:String,
     },
+    /**
+     * require('URL')
+     */
     data(){
         return{
             // six:'woman'
@@ -35,10 +39,20 @@ export default {
     margin-left: 50px;
     margin-top: 40px;
 }
-.hair{
-    margin-left: -200px;
+.overall{
+    display: flex;
+    flex-direction:column;
 }
-.clothes{
-
+.hair111{
+    margin-top: 5px;
+    margin-left: -165px;
+    width: 146px;
+    height: 180px;
+}
+.clothes111{
+    width:200px;
+    height:560px;
+    margin-top: -140px;
+    margin-left: -200px;
 }
 </style>

@@ -1,6 +1,6 @@
 
-import HomeVue from '../components/HomeVue'
-import LoginVue from '../components/LoginVue'
+import HomeVue from '@/components/HomeVue'
+import LoginVue from '@/components/LoginVue'
 // import {createRouter, createWebHistory} from 'vue-router'
 
 import Vue from 'vue'

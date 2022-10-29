@@ -23,6 +23,10 @@ export default {
       userName:'',
     }
   },
+  mounted() {
+    console.log('App Mounted： ');
+    console.log(this)
+  },
   methods:{
     changePage(param){
       this.page=param;
@@ -44,5 +48,14 @@ export default {
 body{
   background:#f29191;
   margin: 0;
+}
+img {
+  width: 200px;
+  height: 400px;
+}
+.img {
+  position: relative;
+  z-index: 100;
+
 }
 </style>
